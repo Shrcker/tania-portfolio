@@ -1,3 +1,28 @@
+:root {
+    --banner-color: #4e2a58;
+    --white: #fff;
+}
+*{
+    box-sizing: border-box;
+}
 body header img {
     border-radius: 100%;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+footer,
+header {
+    padding: 40px;
+    background: var(--banner-color);
+    text-align: center;
+    color: var(--white);
+}
+
+header {
+    padding: 80px;
 }
