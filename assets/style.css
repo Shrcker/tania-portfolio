@@ -2,14 +2,16 @@
     --banner-color: #4e2a58;
     --white: #fff;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
+
 body header img {
     border-radius: 100%;
 }
 
-body{
+body {
     display: flex;
     margin: 0;
     flex-direction: column;
@@ -25,4 +27,13 @@ header {
 
 header {
     padding: 80px;
+}
+
+body nav article {
+    flex: 1,0,0;
+    padding: 20px;
+    margin: 50px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
 }
