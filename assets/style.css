@@ -15,6 +15,7 @@ a {
 body header img {
     border-radius: 100%;
     margin: 20px;
+    width: 200px;
 }
 
 footer,
@@ -25,41 +26,49 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column wrap;
+    /* display: flex; */
     padding: 60px;
     margin: 0px;
     background-color: var(--white);
+}
+
+main h2 + p {
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-bottom: 25px;
 }
 
 header {
     padding: 80px;
 }
 
+nav {
+    display: flex;
+}
+
 .card {
-    flex: 1 0 200px;
     padding: 20px;
-    text-align: left;
     border-style: dashed;
     border-width: 5px;
     border-color: pink;
-}
-
-.card aside {
-    flex-flow: column wrap;
 }
 
 .card p {
     text-align: left;
 }
 
-#float-right {
+.float-right {
+    flex: 1 1 150px;
+    flex-flow: row-reverse wrap;
+    align-self: start;
     float: inline-end;
     margin-left: 25px;
 }
 
-#float-left {
+.float-left {
+    flex: 2 2 200px;
     float: inline-start;
+    flex-flow: column wrap;
+    align-self: start;
     margin-right: 25px;
 }
