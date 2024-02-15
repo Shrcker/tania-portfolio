@@ -24,6 +24,10 @@ header {
     color: var(--white);
 }
 
+footer {
+    padding-top: 50px;
+}
+
 main {
     padding: 60px;
     margin: 0px;
@@ -63,4 +67,25 @@ header {
 .column-right {
     grid-column: 4;
     grid-row: 1 / 5;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        grid-template-columns: 1;
+        grid-template-columns: 100%;
+        grid-row-gap: 2em;
+    }
+    .column-left,
+    .column-right {
+        grid-column: 1 / 1;
+    }
+    #a1 {
+        grid-row: 1/2;
+    }
+    #a2 {
+        grid-row: 2/3;
+    }
+    #side-bar {
+        grid-row: 3/4;
+    }
 }
