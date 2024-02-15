@@ -18,7 +18,7 @@ I've had the links open in new tabs as well so that users can return to the main
 
 Finally, my contact email is linked in the footer so that interested users may contact me for business inquiries. I figure that would be appropriate if I wanted the site to function not just as a directory but also a digital resume. 
 
-![alt text](assets/images/screenshot.png)
+![Image of final site submission](./assets/images/tania-portfolio-image.png)
 
 ## Features
 
