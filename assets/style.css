@@ -1,6 +1,8 @@
 :root {
     --banner-color: #4e2a58;
     --white: #FAF9F6;
+    --orange: #d87736;
+    --dark-orange: #d62800;
 }
 
 * {
@@ -54,15 +56,19 @@ header {
 }
 
 .card article, aside {
-    border-color: pink;
-    border-style: dashed;
+    border-color: var(--dark-orange);
+    border-style: solid;
     border-width: 5px;
     padding: 10px;
+    color: var(--white);
+    background-color: var(--orange);
+    transition: 2s ease-in 1s;
 }
 
-.card a {
-    color: black;
+aside {
+    color: var(--white);
 }
+
 
 .column-left {
     grid-column: 1 / 3;
@@ -73,17 +79,19 @@ header {
     grid-row: 1 / 5;
 }
 
-/* Tried implementing nth-child for simplicity, is not working for whatever reason */
-h3:nth-child(2) {
-    display: none;
-    padding: 1% 0; 
+/* Simple interactivity to have the border react to user input */
+article:hover {
+    border-style: dashed;
+}
+
+a:hover {
+    color: blue;
 }
 
 /* Defines new layout for smaller screens. */
 @media screen and (max-width: 992px) {
     .card {
         /* Arranges grid into vertical stacks. */
-        grid-template-columns: 1;
         grid-template-columns: 100%;
         grid-row-gap: 2em;
     }
@@ -99,5 +107,8 @@ h3:nth-child(2) {
     }
     #side-bar {
         grid-row: 3/4;
+        /* Making side bar smaller to distinguish it from other elements. */
+        width: 50%;
+        justify-self: center;
     }
 }
