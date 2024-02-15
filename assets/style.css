@@ -37,7 +37,6 @@ header {
     color: var(--white);
 }
 
-
 main {
     padding: 60px;
     margin: 0px;
@@ -80,6 +79,10 @@ aside {
     border-width: 5px;
 }
 
+aside p {
+    justify-self: center;
+    align-self: center;
+}
 
 .column-left {
     grid-column: 1 / 3;
