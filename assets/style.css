@@ -44,20 +44,24 @@ header {
     padding: 80px;
 }
 
+/* Conforms main body section into a basic grid. */
 .card {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill,minmax(160px, 1fr)); */
     grid-template-columns: minmax(250px, 500px) repeat(2, 1fr) 200px;
     grid-auto-rows: minmax(100px, auto);
     grid-column-gap: 10px;
     grid-row-gap: 2em;
 }
 
-.card article {
+.card article, aside {
     border-color: pink;
     border-style: dashed;
     border-width: 5px;
     padding: 10px;
+}
+
+.card a {
+    color: black;
 }
 
 .column-left {
@@ -69,8 +73,16 @@ header {
     grid-row: 1 / 5;
 }
 
+/* Tried implementing nth-child for simplicity, is not working for whatever reason */
+h3:nth-child(2) {
+    display: none;
+    padding: 1% 0; 
+}
+
+/* Defines new layout for smaller screens. */
 @media screen and (max-width: 992px) {
     .card {
+        /* Arranges grid into vertical stacks. */
         grid-template-columns: 1;
         grid-template-columns: 100%;
         grid-row-gap: 2em;
